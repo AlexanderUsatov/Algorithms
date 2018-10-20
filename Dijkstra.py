@@ -34,7 +34,7 @@ for i in range(m):
 q = PriorityQueue()
 q.put((0, 0))
 for i in range(n):
-    if q.empty():
+    if out[n - 1] or q.empty():
         break
     now = q.get()
     if out[now[1]] == 1:
