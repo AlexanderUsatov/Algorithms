@@ -38,13 +38,13 @@ public class Main {
             return 0;
         if (g[i].size() == 1 && i != 0)
             return 1;
-        int sum_ = 0;
+        int sum = 0;
         for (int j : g[i]) {
             if (j == par)
                 continue;
-            sum_ += rec(j, i, cats_prev);
+            sum += rec(j, i, cats_prev);
         }
-        return sum_;
+        return sum;
 
     }
 }
