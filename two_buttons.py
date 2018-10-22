@@ -7,7 +7,8 @@ m = int(s[1])
 g = [[] for i in range(20_000 + 1)]
 
 for i in range(1, 10_001):
-    g[i].append(i * 2)
+    if i < m:
+        g[i].append(i * 2)
 
 for i in range(2, 20_001):
     g[i].append(i - 1)
