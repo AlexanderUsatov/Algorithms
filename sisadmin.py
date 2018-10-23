@@ -22,9 +22,9 @@ for i in range(0, n):
     if i == v or i == ignore:
         continue
     for j in range(i + 1, n):
-        if j == v or j == ignore:
-            continue
         if m == 0:
             exit(0)
+        if j == v or j == ignore:
+            continue
         print(str(i + 1) + ' ' + str(j + 1))
         m -= 1
