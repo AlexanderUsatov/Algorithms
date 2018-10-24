@@ -3,6 +3,10 @@ n = int(s[0])
 m = int(s[1])
 k = int(s[2])
 
+if k == 1:
+    print(0)
+    exit(0)
+
 snm = [-1] * n
 
 
@@ -38,11 +42,7 @@ for i in range(n):
     if snm[i] < 0:
         res *= (-1 * snm[i]) % k
 
-if count == 1 and k != 1:
-    print(1)
-    exit(0)
-
-try:
+if count == 1:
+        print(1)
+else:
     print(res * pow(n, count - 2, k) % k)
-except:
-    print(int(res * pow(n, count - 2) % k))
